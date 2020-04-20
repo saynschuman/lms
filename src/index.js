@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import rootSaga from './store/sagas';
 import store from './store';
+import './commons/utils/interceptors';
 
 store.runSaga(rootSaga);
 
