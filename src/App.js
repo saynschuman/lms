@@ -1,10 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const App = () => {
+  const test = useSelector(({ test }) => test);
   return (
     <BrowserRouter>
-      <div>project</div>
+      <div>project: {test}</div>
       <Switch>
         <Route path="/one" component={() => 'one'} />
         <Route path="/two" component={() => 'two'} />
